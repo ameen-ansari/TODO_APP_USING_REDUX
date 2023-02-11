@@ -1,0 +1,77 @@
+.parent {
+    width:100vw ;
+    min-height: 50vh;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent div:nth-child(1 ) {
+    overflow-x: hidden;
+    width:60%;
+}
+
+.todoParent {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    gap: 0.5rem;
+}
+
+.intro {
+position: fixed;
+z-index: 1;
+right: 1rem;
+bottom: 1rem;
+}
+
+.intro a {
+    text-decoration: none;
+    color: black;
+}
+
+.todoParent > div {
+    width: 45vw;
+
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+}
+.btns * {
+    flex: 1;
+    border: 0;
+    gap: 5px;
+    border-radius: 12px;
+}
+
+@media(max-width:600px){
+    .parent {
+        min-height: 40vh;
+    }
+    .parent div:nth-child(1 ) {
+        width:95%;
+    }
+    
+}
+@media(max-width:500px){
+    .todoParent div {
+        margin: 0.3rem;
+        width: 90vw;
+    
+    }
+    .btns {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .btns *{
+        width: 80%;
+        margin: auto;
+    }
+    
+}
